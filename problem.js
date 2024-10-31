@@ -13,3 +13,20 @@ CHALLENGE
 - If the password is less than 5 characters, log out "Your password is too short!".
 */
 
+
+function passwordLogIn(password, userInput,requiredLength) {
+    if (password === userInput) 
+        { console.log("Access Granted")}
+    else if (userInput !== password && userInput !== "Reset" && userInput !== "Forgot")
+    {console.log("Access Denied!")}
+   else if (userInput === "Forgot")
+    { console.log("Here is a hint")}
+    else if (userInput === "Reset")
+    {console.log("Let's reset your account")}
+  
+}
+
+passwordLogIn("ILoveMidterms", "Reset")
+passwordLogIn("ILoveMidterms", "Forgot")
+passwordLogIn("ILoveMidterms", "ILoveMidterms")
+passwordLogIn("ILoveMidterms", "Whatismypassword" )
